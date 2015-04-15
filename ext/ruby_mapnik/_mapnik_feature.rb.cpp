@@ -33,7 +33,7 @@ SOFTWARE.
 #include <mapnik/wkt/wkt_factory.hpp>
 #include <mapnik/feature.hpp>
 
-#if MAPNIK_VERSION >= 200200
+#if MAPNIK_VERSION >= 200300
        typedef mapnik::value_integer value_integer;
 #else
        typedef int value_integer;

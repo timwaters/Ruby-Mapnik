@@ -36,7 +36,7 @@ SOFTWARE.
 #include <mapnik/feature_layer_desc.hpp>
 #include <mapnik/box2d.hpp>
 
-#if MAPNIK_VERSION >= 200200
+#if MAPNIK_VERSION >= 200300
 	typedef mapnik::value_integer value_integer;
 #else
 	typedef int value_integer;

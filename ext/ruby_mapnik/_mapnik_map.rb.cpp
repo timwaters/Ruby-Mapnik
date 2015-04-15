@@ -35,7 +35,7 @@ SOFTWARE.
 #include <mapnik/agg_renderer.hpp>
 #include <mapnik/graphics.hpp>
 #ifdef HAVE_CAIRO
-#if MAPNIK_VERSION >= 200200
+#if MAPNIK_VERSION >= 200300
   #include <mapnik/cairo_context.hpp>
 #endif
   #include <mapnik/cairo_renderer.hpp>
@@ -149,7 +149,7 @@ namespace {
   void render_to_cairo_surface(mapnik::Map const & map, Rice::Object rb_surface, unsigned offset_x = 0, unsigned offset_y = 0){
     using namespace mapnik;
     cairo_surface_t * surface = rb_cairo_surface_from_ruby_object(rb_surface);
-#if MAPNIK_VERSION >= 200200
+#if MAPNIK_VERSION >= 200300
     mapnik::cairo_surface_ptr surface_ref(cairo_surface_reference(surface), mapnik::cairo_surface_closer());
     double scale_factor = 1.0;
     mapnik::cairo_renderer<mapnik::cairo_surface_ptr> ren(map, surface_ref, scale_factor, offset_x, offset_y);
@@ -162,7 +162,7 @@ namespace {
 
   void render_to_cairo_context(mapnik::Map const & map, Rice::Object rb_context, unsigned offset_x = 0, unsigned offset_y = 0){
     cairo_t * context = rb_cairo_context_from_ruby_object(rb_context);
-#if MAPNIK_VERSION >= 200200
+#if MAPNIK_VERSION >= 200300
     mapnik::cairo_ptr context_ref(context, mapnik::cairo_closer());
     double scale_factor = 1.0;
     mapnik::cairo_renderer<mapnik::cairo_ptr> ren(map, context_ref, scale_factor, offset_x, offset_y);
