@@ -29,7 +29,7 @@ Hoe.spec 'ruby_mapnik' do
   developer('Elliot Laster', 'elliotlaster@gmail.com')
   self.readme_file   = 'README.rdoc'
   self.history_file  = 'History.txt'
-  self.extra_deps << ['rice', '>= 1.4.2']
+  self.extra_deps << ['rice', '>= 1.7.0']
   self.extra_dev_deps << ['rake-compiler', '>= 0']
   self.extra_dev_deps << ['chunky_png', '>= 0']
 

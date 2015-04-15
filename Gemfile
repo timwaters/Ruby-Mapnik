@@ -4,7 +4,7 @@
 
 source :gemcutter
 
-gem "rice", ">=1.4.2"
+gem "rice", ">=1.7.0"
 
 gem "chunky_png", ">=0", :group => [:development, :test]
 gem "rake-compiler", ">=0", :group => [:development, :test]
